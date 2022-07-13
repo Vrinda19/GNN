@@ -1,0 +1,18 @@
+{
+    "os": "Windows-10-10.0.19043-SP0",
+    "python": "3.9.7",
+    "heartbeatAt": "2022-07-13T20:52:24.124951",
+    "startedAt": "2022-07-13T20:52:20.781729",
+    "docker": null,
+    "gpu": "NVIDIA GeForce GTX 1650",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\ambek\\OneDrive - UvA\\personal\\vs\\dl\\train.py",
+    "codePath": "train.py",
+    "host": "MSI-Sameer",
+    "username": "ambek",
+    "executable": "C:\\Users\\ambek\\anaconda3\\envs\\dl_gpu\\python.exe"
+}

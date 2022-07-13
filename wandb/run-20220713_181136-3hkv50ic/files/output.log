@@ -1,0 +1,131 @@
+
+WANB Project name efficient-music-2
+Saving logs and tensorboard logs to logs\efficient-music-2
+tfb train path logs\efficient-music-2/train
+tfb_valid path logs\efficient-music-2/valid
+Using device cuda
+Model GNN(
+  (embed): Sequential(
+    (0): Linear(in_features=5, out_features=64, bias=True)
+  )
+  (gnn_layers): ModuleList(
+    (0): ReLU(inplace=True)
+    (1): RGCNConv(64, 64, num_relations=4)
+    (2): ReLU(inplace=True)
+    (3): MFConv(64, 64)
+    (4): ReLU(inplace=True)
+    (5): RGCNConv(64, 64, num_relations=4)
+    (6): ReLU(inplace=True)
+    (7): MFConv(64, 64)
+  )
+  (head): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+Epochs:   0%|                                                                                                                                                               | 0/10 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 761it [01:24, 10.20it/s]
+Epoch 1
+
+	Validation loss 0.38
+Validation Loss Decreased(inf--->0.380000) 	 Saving and Copying model
+Epochs:  10%|███████████████                                                                                                                                        | 1/10 [01:32<13:53, 92.63s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 767it [00:51, 14.92it/s]
+Epoch 2
+
+	Validation loss 0.27
+Validation Loss Decreased(0.380000--->0.270000) 	 Saving and Copying model
+Epochs:  20%|██████████████████████████████▏                                                                                                                        | 2/10 [02:27<09:21, 70.23s/it]
+
+
+
+
+
+
+
+
+
+Traceback (most recent call last):
+  File "C:\Users\ambek\OneDrive - UvA\personal\vs\dl\train.py", line 370, in <module>
+  File "C:\Users\ambek\OneDrive - UvA\personal\vs\dl\train.py", line 309, in main
+    model, **kwargs
+  File "C:\Users\ambek\OneDrive - UvA\personal\vs\dl\train.py", line 184, in train
+  File "C:\Users\ambek\anaconda3\envs\dl_gpu\lib\site-packages\tqdm\std.py", line 1180, in __iter__
+    for obj in iterable:
+  File "C:\Users\ambek\anaconda3\envs\dl_gpu\lib\site-packages\torch\utils\data\dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "C:\Users\ambek\anaconda3\envs\dl_gpu\lib\site-packages\torch\utils\data\dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "C:\Users\ambek\anaconda3\envs\dl_gpu\lib\site-packages\torch\utils\data\_utils\fetch.py", line 52, in fetch
+    return self.collate_fn(data)
+  File "C:\Users\ambek\anaconda3\envs\dl_gpu\lib\site-packages\torch_geometric\loader\dataloader.py", line 39, in __call__
+    return self.collate(batch)
+  File "C:\Users\ambek\anaconda3\envs\dl_gpu\lib\site-packages\torch_geometric\loader\dataloader.py", line 19, in collate
+    return Batch.from_data_list(batch, self.follow_batch,
+  File "C:\Users\ambek\anaconda3\envs\dl_gpu\lib\site-packages\torch_geometric\data\batch.py", line 69, in from_data_list
+    batch, slice_dict, inc_dict = collate(
+  File "C:\Users\ambek\anaconda3\envs\dl_gpu\lib\site-packages\torch_geometric\data\collate.py", line 112, in collate
+    out_store.batch = arange.repeat_interleave(repeats)
+KeyboardInterrupt

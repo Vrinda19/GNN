@@ -1,0 +1,323 @@
+
+WANB Project name vocal-meadow-1
+Saving logs and tensorboard logs to logs\vocal-meadow-1
+tfb train path logs\vocal-meadow-1/train
+tfb_valid path logs\vocal-meadow-1/valid
+Using device cuda
+Model GNN(
+  (embed): Sequential(
+    (0): Linear(in_features=5, out_features=64, bias=True)
+  )
+  (gnn_layers): ModuleList(
+    (0): ReLU(inplace=True)
+    (1): RGCNConv(64, 64, num_relations=4)
+    (2): ReLU(inplace=True)
+    (3): MFConv(64, 64)
+    (4): ReLU(inplace=True)
+    (5): RGCNConv(64, 64, num_relations=4)
+    (6): ReLU(inplace=True)
+    (7): MFConv(64, 64)
+  )
+  (head): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+Epochs:   0%|                               | 0/10 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 780it [01:24, 10.40it/s]
+Epoch 1
+
+	Validation loss 0.34
+Validation Loss Decreased(inf--->0.340000) 	 Saving and Copying model
+Epochs:  10%|██▎                    | 1/10 [01:31<13:41, 91.27s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 776it [00:45, 21.36it/s]
+Epoch 2
+
+	Validation loss 0.24
+Validation Loss Decreased(0.340000--->0.240000) 	 Saving and Copying model
+Epochs:  20%|████▌                  | 2/10 [02:19<08:49, 66.13s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 773it [00:41, 13.85it/s]
+Epoch 3
+
+	Validation loss 0.22
+Validation Loss Decreased(0.240000--->0.220000) 	 Saving and Copying model
+Epochs:  30%|██████▉                | 3/10 [03:06<06:39, 57.07s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 779it [00:38, 19.57it/s]
+Epoch 4
+
+	Validation loss 0.11
+Validation Loss Decreased(0.220000--->0.110000) 	 Saving and Copying model
+Epochs:  40%|█████████▏             | 4/10 [03:47<05:04, 50.79s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 767it [00:43, 12.62it/s]
+Epoch 5
+
+	Validation loss 0.05
+Validation Loss Decreased(0.110000--->0.050000) 	 Saving and Copying model
+Epochs:  50%|███████████▌           | 5/10 [04:35<04:10, 50.03s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 779it [00:41, 21.03it/s]
+Epoch 6
+
+	Validation loss 0.03
+Validation Loss Decreased(0.050000--->0.030000) 	 Saving and Copying model
+Epochs:  60%|█████████████▊         | 6/10 [05:19<03:11, 47.91s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 760it [00:39, 19.75it/s]
+Epoch 7
+
+	Validation loss 0.02
+Validation Loss Decreased(0.030000--->0.020000) 	 Saving and Copying model
+Epochs:  70%|████████████████       | 7/10 [06:02<02:19, 46.38s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 8
+Epochs:  80%|██████████████████▍    | 8/10 [06:55<01:36, 48.20s/it]
+Iterations: 26it [00:01, 19.64it/s]
+	Validation loss 0.01
+Validation Loss Decreased(0.020000--->0.010000) 	 Saving and Copying model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 751it [00:41, 19.86it/s]
+Epoch 9
+
+Epochs:  90%|████████████████████▋  | 9/10 [07:40<00:47, 47.33s/it]
+Iterations: 0it [00:00, ?it/s]
+	Validation loss 0.0
+Validation Loss Decreased(0.010000--->0.000000) 	 Saving and Copying model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 760it [00:42, 18.04it/s]
+Epoch 10
+
+	Validation loss 0.0
+
+Epochs: 100%|██████████████████████| 10/10 [08:26<00:00, 50.61s/it]
+	 Saved graphs to logs\vocal-meadow-1\gnnValidation_Loss.png
+********** Running Permutated Test **********
+Test Loss 3.306289700551267e-05
+Test Loss with Permutation 3.306297699640865e-05
+Traceback (most recent call last):
+  File "C:\Users\ambek\OneDrive - UvA\personal\vs\dl\train.py", line 374, in <module>
+    main(**kwargs)
+  File "C:\Users\ambek\OneDrive - UvA\personal\vs\dl\train.py", line 312, in main
+    model = train(
+  File "C:\Users\ambek\OneDrive - UvA\personal\vs\dl\train.py", line 272, in train
+    wandb({"permuted_test_loss": permuted_test_loss})
+TypeError: 'module' object is not callable

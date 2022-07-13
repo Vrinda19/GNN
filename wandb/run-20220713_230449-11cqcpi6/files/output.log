@@ -1,0 +1,306 @@
+
+WANB Project name glowing-sound-2
+Epochs:   0%|                                                                                                                                                               | 0/10 [00:00<?, ?it/s]
+Iterations: 0it [00:00, ?it/s]
+Saving logs and tensorboard logs to logs\glowing-sound-2
+tfb train path logs\glowing-sound-2/train
+tfb_valid path logs\glowing-sound-2/valid
+Using device cuda
+Model GNN(
+  (embed): Sequential(
+    (0): Linear(in_features=5, out_features=64, bias=True)
+  )
+  (gnn_layers): ModuleList(
+    (0): ReLU(inplace=True)
+    (1): RGCNConv(64, 64, num_relations=4)
+    (2): ReLU(inplace=True)
+    (3): MFConv(64, 64)
+    (4): ReLU(inplace=True)
+    (5): RGCNConv(64, 64, num_relations=4)
+    (6): ReLU(inplace=True)
+    (7): MFConv(64, 64)
+  )
+  (head): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 1
+		Training data loss 0.4324394499026859
+	Validation loss 0.36
+Validation Loss Decreased(inf--->0.360000) 	 Saving and Copying model
+Epochs:  10%|███████████████                                                                                                                                        | 1/10 [01:23<12:31, 83.45s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 769it [00:41, 18.73it/s]
+Epoch 2
+
+	Validation loss 0.28
+Validation Loss Decreased(0.360000--->0.280000) 	 Saving and Copying model
+Epochs:  20%|██████████████████████████████▏                                                                                                                        | 2/10 [02:08<08:05, 60.73s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 770it [00:42, 15.73it/s]
+Epoch 3
+
+	Validation loss 0.24
+Validation Loss Decreased(0.280000--->0.240000) 	 Saving and Copying model
+Epochs:  30%|█████████████████████████████████████████████▎                                                                                                         | 3/10 [02:54<06:17, 53.93s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 758it [00:43, 16.39it/s]
+Epoch 4
+
+Epochs:  40%|████████████████████████████████████████████████████████████▍                                                                                          | 4/10 [03:41<05:06, 51.16s/it]
+Iterations: 2it [00:00, 15.32it/s]
+	Validation loss 0.17
+Validation Loss Decreased(0.240000--->0.170000) 	 Saving and Copying model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 774it [00:42, 19.28it/s]
+Epoch 5
+
+	Validation loss 0.1
+Validation Loss Decreased(0.170000--->0.100000) 	 Saving and Copying model
+Epochs:  50%|███████████████████████████████████████████████████████████████████████████▌                                                                           | 5/10 [04:26<04:05, 49.15s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 778it [00:43, 18.59it/s]
+Epoch 6
+
+	Validation loss 0.05
+Validation Loss Decreased(0.100000--->0.050000) 	 Saving and Copying model
+Epochs:  60%|██████████████████████████████████████████████████████████████████████████████████████████▌                                                            | 6/10 [05:12<03:12, 48.02s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 7
+		Training data loss 0.035128328305276804
+	Validation loss 0.02
+Validation Loss Decreased(0.050000--->0.020000) 	 Saving and Copying model
+Epochs:  70%|█████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                             | 7/10 [05:58<02:21, 47.30s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 771it [00:41, 19.81it/s]
+Epoch 8
+
+	Validation loss 0.01
+Validation Loss Decreased(0.020000--->0.010000) 	 Saving and Copying model
+Epochs:  80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                              | 8/10 [06:42<01:32, 46.29s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 754it [00:37, 19.03it/s]
+Epoch 9
+
+
+Epochs:  90%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉               | 9/10 [07:23<00:44, 44.66s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 10
+
+Epochs: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [08:04<00:00, 48.44s/it]
+	Validation loss 0.01
+--Finished Training
+	 Saved graphs to logs\glowing-sound-2\gnnValidation_Loss.png
+********** Running Permutated Test **********
+Test Loss 6.768334816935604e-05
+Test Loss with Permutation 6.768332531481432e-05
+Note: All tensorboard logs, graphs, loss values, best model etc have been saved to  logs\glowing-sound-2

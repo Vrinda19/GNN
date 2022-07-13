@@ -1,0 +1,317 @@
+
+WANB Project name hardy-serenity-3
+Epochs:   0%|                                                                                                                                                               | 0/10 [00:00<?, ?it/s]
+Iterations: 0it [00:00, ?it/s]
+Saving logs and tensorboard logs to logs\hardy-serenity-3
+tfb train path logs\hardy-serenity-3/train
+tfb_valid path logs\hardy-serenity-3/valid
+Using device cuda
+Model GNN(
+  (embed): Sequential(
+    (0): Linear(in_features=5, out_features=64, bias=True)
+  )
+  (gnn_layers): ModuleList(
+    (0): ReLU(inplace=True)
+    (1): RGCNConv(64, 64, num_relations=4)
+    (2): ReLU(inplace=True)
+    (3): MFConv(64, 64)
+    (4): ReLU(inplace=True)
+    (5): RGCNConv(64, 64, num_relations=4)
+    (6): ReLU(inplace=True)
+    (7): MFConv(64, 64)
+  )
+  (head): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 760it [01:16, 11.19it/s]
+Epoch 1
+
+	Validation loss 0.36
+Validation Loss Decreased(inf--->0.360000) 	 Saving and Copying model
+Epochs:  10%|███████████████                                                                                                                                        | 1/10 [01:23<12:35, 83.97s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 777it [00:45, 19.74it/s]
+Epoch 2
+
+	Validation loss 0.27
+Validation Loss Decreased(0.360000--->0.270000) 	 Saving and Copying model
+Epochs:  20%|██████████████████████████████▏                                                                                                                        | 2/10 [02:12<08:23, 62.91s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 760it [00:45, 10.41it/s]
+Epoch 3
+
+	Validation loss 0.24
+Validation Loss Decreased(0.270000--->0.240000) 	 Saving and Copying model
+Epochs:  30%|█████████████████████████████████████████████▎                                                                                                         | 3/10 [03:01<06:35, 56.54s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 762it [00:42, 20.82it/s]
+Epoch 4
+
+	Validation loss 0.15
+Validation Loss Decreased(0.240000--->0.150000) 	 Saving and Copying model
+Epochs:  40%|████████████████████████████████████████████████████████████▍                                                                                          | 4/10 [03:47<05:14, 52.42s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 5
+		Training data loss 0.11301087498397741
+	Validation loss 0.08
+Validation Loss Decreased(0.150000--->0.080000) 	 Saving and Copying model
+Epochs:  50%|███████████████████████████████████████████████████████████████████████████▌                                                                           | 5/10 [04:30<04:05, 49.03s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 752it [00:40, 19.13it/s]
+Epoch 6
+
+	Validation loss 0.05
+Validation Loss Decreased(0.080000--->0.050000) 	 Saving and Copying model
+Epochs:  60%|██████████████████████████████████████████████████████████████████████████████████████████▌                                                            | 6/10 [05:14<03:09, 47.33s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Iterations: 777it [00:42, 17.60it/s]
+Epoch 7
+
+Iterations: 0it [00:00, ?it/s]
+	Validation loss 0.02
+Validation Loss Decreased(0.050000--->0.020000) 	 Saving and Copying model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 8
+Epochs:  80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                              | 8/10 [06:46<01:33, 46.89s/it]
+Iterations: 5it [00:00, 18.25it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 9
+Epochs:  90%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉               | 9/10 [07:27<00:45, 45.15s/it]
+Iterations: 26it [00:01, 21.43it/s]
+	Validation loss 0.0
+Validation Loss Decreased(0.020000--->0.000000) 	 Saving and Copying model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 10
+
+Epochs: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [08:14<00:00, 49.45s/it]
+	Validation loss 0.0
+--Finished Training
+	 Saved graphs to logs\hardy-serenity-3\gnnValidation_Loss.png
+********** Running Permutated Test **********
+Test Loss 4.052419066886229e-05
+Test Loss with Permutation 4.052422495067485e-05
+Traceback (most recent call last):
+  File "C:\Users\ambek\OneDrive - UvA\personal\vs\dl\train.py", line 373, in <module>
+    main(**kwargs)
+  File "C:\Users\ambek\OneDrive - UvA\personal\vs\dl\train.py", line 312, in main
+    model = train(
+  File "C:\Users\ambek\OneDrive - UvA\personal\vs\dl\train.py", line 272, in train
+    wandb({"permuted_test_loss": permuted_test_loss})
+TypeError: 'module' object is not callable
