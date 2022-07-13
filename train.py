@@ -12,7 +12,6 @@ from torch_geometric.loader import DataLoader
 from tqdm import tqdm
 
 from data import *
-#from networks import *
 from networks import *
 import os
 from time import gmtime, strftime
